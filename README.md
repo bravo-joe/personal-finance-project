@@ -5,7 +5,8 @@ A straightforward project to analyze spending habits. Expenses must be tracked o
 ## Requirements
 
 * Python 3.12.9
-* MySQL 8.0.40 (for Linux on x86_64)
+* PostgreSQL 16.8 (for Linux on x86_64)
+* Airflow 2.10.5
 
 ## Installation
 
