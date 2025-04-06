@@ -1,0 +1,12 @@
+# Config file for the "pg_conn_test.py" script
+server:
+  host: "localhost"
+  port: 5432
+database:
+  user: "postgres"
+  password: "3Gyx!ltJ;S^bXOm-"
+  name: "finances_db"
+  table: "dec_2023"
+directories:
+  tbl_schema: "/run/media/joebravo/Extreme SSD/personal_finances_project/finances_schema.sql"
+  csv_file: "data/december_2023.csv"
