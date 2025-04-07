@@ -1,0 +1,12 @@
+# Config file for the "data_migration.py" and script
+server:
+  host: "[host_name]"
+  port: [port_num]
+database:
+  user: "[user_name]]"
+  password: "[private_pw]"
+  name: "[db_name]"
+  table: "[tbl_name]"
+directories:
+  tbl_schema: "/some/directory/to/schema/schema.sql"
+  csv_file: "/location/of/data/file/file.csv"
