@@ -7,18 +7,26 @@
 ##################################################################################
 from pathlib import Path
 import os
-import pandas as pd
-import re # Regular expression library also for removing apostrophes
+# import re # Regular expression library also for removing apostrophes
 import psycopg2 # To handle connection to postgresql
 import yaml # For configuration file
 # import matplotlib.pyplot as plt
 import numpy as np
 np.random.seed(1234)
-import random
-import time
-from datetime import datetime, timedelta
+import pandas as pd
+
 # Some custom helper functions
-from helper_funcs.pfp_helper_funcs import rm_plot2_cols, process_plot4
+from helper_funcs.pfp_helper_funcs import (
+    rm_plot2_cols,
+    process_plot4
+)
+from helper_funcs.synth_data_funcs import (
+    desc_and_cat,
+    necessities,
+    date_day_df,
+    create_desc_cat_df,
+    amount
+)
 
 # Part 2: Declare some global variables
 ##################################################################################
@@ -32,9 +40,22 @@ num_data_pts = 150
 start_date = '2023-12-01'
 end_date = '2023-12-31'
 
+# Date and day dataframe
+df1 = date_day_df(
+    start_date,
+    end_date,
+    num_data_pts
+)
 
+df2 = create_desc_cat_df(
+    num_data_pts,
+    desc_and_cat
+)
 
+df3 = pd.concat(
+    [df1, df2], 
+    axis=1
+)
+print(df3)
 
-pd.set_option('display.max_rows', None)
-pd.set_option('display.max_columns', None)
 # End of "creating_synthetic_data.py"
