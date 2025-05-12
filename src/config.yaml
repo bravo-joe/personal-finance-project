@@ -10,3 +10,6 @@ database:
 directories:
   tbl_schema: "/some/directory/to/schema/schema.sql"
   csv_file: "/location/of/data/file/file.csv"
+synth_data:
+  database: "[test_synth_data]"
+  tbl_name: "[table_name]"
